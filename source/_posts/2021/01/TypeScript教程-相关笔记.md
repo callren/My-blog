@@ -7,7 +7,7 @@ categories: 教程 笔记 TypeScript
 
 关于TS是什么以及为什么要用它就不做赘述了，直接正片开始！
 
-# 前沿
+## 前沿
 
 TypeScript和JavaScript有着不同寻常的关系，JavaScript上的所有的功能，在TypeScript上都有，当然，TypeScript还多了一层类型校验。
 
@@ -17,7 +17,7 @@ TypeScript和JavaScript有着不同寻常的关系，JavaScript上的所有的�
 
 下面就对TypeScript一些内容做一个简要的梳理
 
-# 类型推断
+## 类型推断
 
 TypeScript在大多数的情况下对你写的代码是有一个类型推断的，比如你声明了一个变量并且给它分配了一个特定的值，那么TypeScript就会使用这个值的类型作为这个变量的默认类型
 
@@ -30,7 +30,7 @@ let TypeScript = 'FE情报局'
 
 作为一名前端，相信80%的人都在使用vs code，使用这个软件，在写TypeScript时候会让你更得心应手
 
-# 定义Types
+## 定义Types
 
 在JavaScript中我们可以使用多种设计模式，但是，一些设计模式会让自动的类型推断变的很困难，比如一些动态编程的模式。如果需要涵盖这些情况，TypeScript在JavaScript的基础上做了一些扩展，你可以告诉TypeScript这个地方应该是什么类型
 
@@ -102,11 +102,11 @@ JavaScript中已经有一部分的原始类型你可以在`interface`中使用�
 
 你将会看到有两种声明类型的方式：`Interfaces` `Types`，你应该更倾向于`interfaces`，当你需要特定功能的时候使用`type`
 
-# 组合类型Types
+## 组合类型Types
 
 在TypeScript中，你可以在基本类型的基础上创建一个混合类型。有两种常用的方式：联合类型和泛型
 
-## 联合类型
+### 联合类型
 
 关于联合类型，你可以声明一种类型是多种类型中的一个。例如，你可以将一个`boolean`类型描述为`true`或者`false`
 
@@ -144,7 +144,7 @@ function wrapInArray(obj: string | string[]){
 }
 ```
 
-## 泛型
+### 泛型
 
 泛型为类型提供变量。一个常见的例子是数组，没有泛型的数组可以包含任何类型，一个由泛型定义的数组可以通过泛型来描述数组内的内容
 
@@ -172,7 +172,7 @@ const object = backpack.get()
 // backpack.add(23) ⚠️
 ```
 
-# 结构类型系统
+## 结构类型系统
 
 一个TypeScript的核心原则是重点检查值的结构。也可以称为`duck typing`或者`structural typing`
 

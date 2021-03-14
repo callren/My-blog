@@ -5,7 +5,7 @@ tags: cookie
 categories: 浏览器
 ---
 
-# 谷歌浏览器87版本更新
+## 谷歌浏览器87版本更新
 
 ![谷歌浏览器版本](https://gitee.com/RenYaNan/wx-photo/raw/master/2020-12-31/1609407871306-Chrome-version.png)
 
@@ -13,7 +13,7 @@ categories: 浏览器
 
 判断浏览器版本有很多方法，总的来说就是通过navigator用正则去做对应的匹配，在这里就不多说了
 
-# cookie方法简述
+## cookie方法简述
 
 目前来看，大家在cookie方面都是统一的document.cookie，在此基础上做一些额外的操作，但是通常我们不知道的是，当你设置完成一个cookie信息之后，是否设置成功。你还需要再去获取一下你设置的那个cookie的值，看是否已经成功设置，麻烦不说，还影响我们的执行效率。而且对于正则匹配我们拿出来的所有的cookie信息这种方式很尴尬。cookie是否发生了变更，也没有对应的监听，这些都是要解决的
 
@@ -21,7 +21,7 @@ categories: 浏览器
 
 ![cookie](https://gitee.com/RenYaNan/wx-photo/raw/master/2020-12-31/1609407891910-cookie.jpeg)
 
-# 获取cookie
+## 获取cookie
 
 刚才我们也提到了，目前都是统一通过document.cookie的方式获取的cookie，然后通过对应的匹配形式。为什么我们只想要name这个对应的cookie信息，但总是要先把所有的拿出来，并且还很开心的觉得自己封装了一个好的获取cookie的方法，这总是过于复杂，而且效率很低
 
@@ -53,7 +53,7 @@ try {
 
 可以发现，这种方式不需要再去遍历一整遍cookie的字段了，当然也不会影响你的同步操作，毕竟这个获取方式是异步的
 
-# 设置cookie
+## 设置cookie
 
 之前我们设置cookie的方式
 
@@ -82,7 +82,7 @@ try {
 
 通过上述方式就可以设置一个对应的cookie，当然，只要你不经过catch，它就是设置成功
 
-# 删除cookie
+## 删除cookie
 
 之前的方式，我们通常是通过setCookie的形式将对应的cookie的值设置成空，然后将expires的值设置成过期的时间，这样依靠浏览器就会自动删除其对应的内容，这里不再列举
 
@@ -98,7 +98,7 @@ try {
 
 只要没走到catch，那表明删除已经发生并且是正常的
 
-# 监控cookie
+## 监控cookie
 
 当然，新的API肯定有新的方法，那就是你可以监控cookie，当cookie内容发生变化的时候会执行此操作
 
@@ -115,7 +115,7 @@ cookieStore.addEventListener('change', event => {
 })
 ```
 
-# 总结
+## 总结
 
 针对以上，似乎chrome团队已经解决了我们的对于cookie的问题，并且这些内容在我们认为理所应当应该存在的东西，但是还是能够希望大家能够很好的去使用，有机会体验一次如果你的项目中有需求的话。
 
