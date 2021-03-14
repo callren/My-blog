@@ -35,6 +35,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install
         run: npm install
+        
+      - name: Build
+        run: npm run build
 
       - name: install coscmd
         run: sudo pip install coscmd
@@ -49,6 +52,3 @@ jobs:
       
       - name: upload
         run: coscmd upload -r ./public / 
-        
-      - name: Build
-        run: npm run build
