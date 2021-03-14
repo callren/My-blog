@@ -47,7 +47,7 @@ jobs:
           REGION: ap-beijing
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
       
-      -name: upload
+      - name: upload
         run: coscmd upload -r ./public / 
         
       - name: Build
