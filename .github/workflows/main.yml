@@ -35,6 +35,20 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install
         run: npm install
+
+      - name: install coscmd
+        run: sudo pip install coscmd
+
+      - name: Config coscmd
+        env:
+          SECRET_ID: ${{secrets.SECRET_ID}}
+          SECRET_KEY: ${{secrets.SECRET_KEY}}
+          BUCKET: coding-pages-bucket-219762-8173383-9132-437729-1251240781
+          REGION: ap-beijing
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+      
+      -name: upload
+        run: coscmd upload -r ./public / 
         
       - name: Build
         run: npm run build
